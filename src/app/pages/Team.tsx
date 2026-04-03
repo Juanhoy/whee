@@ -1,7 +1,7 @@
-import imgCeleste from "figma:asset/fd889dc99aea3b981632bd768b67bf2211eeee18.png";
-import imgMarcus from "figma:asset/ed468285194350a2774e48d8e83ea1739ce8b0e5.png";
-import imgXimena from "figma:asset/130b4cc57ec2306acf667aef8767fdffa02a759a.png";
-import imgHero from "figma:asset/608f6c0f05ce473a4f0cb347c6d09f4f27ad46a6.png";
+import imgCeleste from "../../../img/hero.png";
+import imgMarcus from "../../../img/hero.png";
+import imgXimena from "../../../img/hero.png";
+import imgHero from "../../../img/hero.png";
 import { Link } from "react-router";
 
 // Reusable Team Member Card Component
