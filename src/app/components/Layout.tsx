@@ -113,7 +113,7 @@ export function Layout() {
       {/* Footer */}
       <footer className="bg-[#2d2f2c] text-white py-12">
         <div className="max-w-[1440px] mx-auto px-8">
-          <div className="grid grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="font-['Poppins',sans-serif] font-bold text-[20px] text-[#b5adfd] mb-4">
                 Whee! Play Spaces
