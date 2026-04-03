@@ -13,8 +13,9 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              className="flex flex-col"
             >
-              <div className="inline-block bg-[#a8d7ff] px-6 py-2 rounded-full mb-6 relative overflow-hidden group hover:bg-[#92ccfd] transition-colors cursor-default">
+              <div className="inline-block self-start bg-[#a8d7ff] px-6 py-2 rounded-full mb-6 relative overflow-hidden group hover:bg-[#92ccfd] transition-colors cursor-default">
                 <span className="font-['Poppins',sans-serif] font-bold text-[14px] text-[#104b6e] tracking-[0.7px]">
                   SAFE SPACES DESIGNED BY EXPERTS
                 </span>
@@ -25,12 +26,27 @@ export function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="font-['Poppins',sans-serif] font-extrabold text-[48px] md:text-[72px] leading-tight md:leading-[72px] mb-6"
+                className="font-['Poppins',sans-serif] font-extrabold text-[48px] md:text-[60px] lg:text-[72px] leading-tight mb-6"
               >
                 <span className="text-[#2d2f2c]">Architects of</span>
                 <br />
                 <span className="text-[#5a529a]">Inclusion.</span>
               </motion.h1>
+
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="lg:hidden relative my-6"
+              >
+                <div className="rounded-[24px] overflow-hidden flex items-center justify-center">
+                  <img
+                    src={heroImg}
+                    alt="Modern inclusive playground design"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              </motion.div>
 
               <motion.p 
                 initial={{ opacity: 0 }}
@@ -47,18 +63,18 @@ export function Home() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                   <Link
                     to="/contact"
-                    className="block text-center bg-[#5a529a] text-white px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] hover:shadow-xl hover:bg-[#4a4381] transition-all"
+                    className="block w-full text-center bg-[#5a529a] text-white px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] hover:shadow-xl hover:bg-[#4a4381] transition-all"
                   >
                     Book a Tour
                   </Link>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                   <Link
                     to="/solutions"
-                    className="block text-center bg-white text-[#5a529a] px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] border-2 border-[#5a529a] hover:bg-[#5a529a] hover:text-white transition-all"
+                    className="block w-full text-center bg-white text-[#5a529a] px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] border-2 border-[#5a529a] hover:bg-[#5a529a] hover:text-white transition-all"
                   >
                     Explore Solutions
                   </Link>
@@ -70,7 +86,7 @@ export function Home() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative mt-12 md:mt-0"
+              className="hidden lg:block relative"
             >
               <motion.div 
                 whileHover={{ y: -10 }}
@@ -100,7 +116,7 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-[#f5f0ff] rounded-[32px] p-8">
               <div className="bg-[#5a529a] w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -149,7 +165,7 @@ export function Home() {
       {/* Stats Section */}
       <section className="py-24 bg-[#f1f1ec]">
         <div className="max-w-[1440px] mx-auto px-8">
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="font-['Poppins',sans-serif] font-extrabold text-[60px] text-[#5a529a] mb-2">
                 12k+
@@ -198,16 +214,16 @@ export function Home() {
           <p className="font-['Manrope',sans-serif] text-[20px] mb-8 max-w-[600px] mx-auto opacity-90">
             Give us a ring or schedule a site visit today to bring inclusive play to your community.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
             <Link
               to="/contact"
-              className="bg-white text-[#5a529a] px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] hover:shadow-xl transition-shadow"
+              className="block w-full sm:w-auto bg-white text-[#5a529a] px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] hover:shadow-xl transition-shadow"
             >
               Book a Project
             </Link>
             <a
               href="https://example.com/guide"
-              className="bg-[rgba(255,255,255,0.2)] text-white px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] border-2 border-white hover:bg-white hover:text-[#5a529a] transition-colors"
+              className="block w-full sm:w-auto bg-[rgba(255,255,255,0.2)] text-white px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] border-2 border-white hover:bg-white hover:text-[#5a529a] transition-colors"
             >
               Download Safety Guide
             </a>

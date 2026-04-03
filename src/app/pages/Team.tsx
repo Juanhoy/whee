@@ -59,26 +59,32 @@ export function Team() {
       {/* Hero Section */}
       <section className="bg-white py-24">
         <div className="max-w-[1440px] mx-auto px-8">
-          <div className="grid grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-block bg-[#a8d7ff] px-6 py-2 rounded-full mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="flex flex-col">
+              <div className="inline-block self-start bg-[#a8d7ff] px-6 py-2 rounded-full mb-6">
                 <span className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#104b6e] tracking-[0.7px]">
                   THE EXPERTS BEHIND THE MAGIC
                 </span>
               </div>
               
-              <h1 className="font-['Poppins',sans-serif] font-extrabold text-[72px] leading-[72px] mb-6">
+              <h1 className="font-['Poppins',sans-serif] font-extrabold text-[48px] md:text-[60px] lg:text-[72px] leading-tight mb-6">
                 <span className="text-[#2d2f2c]">Architects of</span>
                 <br />
                 <span className="text-[#5a529a]">Inclusion.</span>
               </h1>
 
-              <p className="font-['Manrope',sans-serif] text-[20px] text-[#5a5c58] leading-[32px]">
+              <div className="lg:hidden relative my-6">
+                <div className="rounded-[32px] md:rounded-[48px] overflow-hidden flex items-center justify-center">
+                  <img src={imgHero} alt="Team workspace" className="w-full h-auto object-contain" />
+                </div>
+              </div>
+
+              <p className="font-['Manrope',sans-serif] text-[18px] md:text-[20px] text-[#5a5c58] leading-[32px]">
                 We blend clinical psychology with sensory-focused architecture to build environments where every child, especially those on the autism spectrum, can flourish without barriers.
               </p>
             </div>
 
-            <div className="relative">
+            <div className="hidden lg:block relative">
               <div className="rounded-[48px] overflow-hidden flex items-center justify-center">
                 <img src={imgHero} alt="Team workspace" className="w-full h-auto object-contain" />
               </div>
@@ -100,7 +106,7 @@ export function Team() {
           </div>
 
           {/* Team Grid - All 3 in one row */}
-          <div className="grid grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {/* Ximena Hoyos */}
             <TeamMemberCard
               image={imgXimena}
@@ -175,9 +181,9 @@ export function Team() {
           </div>
 
           {/* Philosophy Card */}
-          <div className="bg-white rounded-[48px] p-10">
-            <div className="flex gap-10 items-center">
-              <div className="flex-1">
+          <div className="bg-white rounded-[48px] p-8 md:p-10">
+            <div className="flex flex-col lg:flex-row gap-10 items-center">
+              <div className="flex-1 order-last lg:order-first">
                 <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
                   Our Collaborative Pulse
                 </h3>
@@ -185,7 +191,7 @@ export function Team() {
                   We don't just build parks; we build ecosystems. Our team meets weekly with a focus group of parents and neurodivergent advocates to peer-review every material, texture, and light fixture before it goes to production.
                 </p>
                 
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                   <div className="flex items-center">
                     <div className="w-10 h-10 rounded-full bg-[#e2e3dd] border-2 border-white"></div>
                     <div className="w-10 h-10 rounded-full bg-[#b5adfd] border-2 border-white -ml-3"></div>
@@ -197,7 +203,7 @@ export function Team() {
                 </div>
               </div>
               
-              <div className="w-72 h-48 rounded-[32px] bg-[#fec97a] flex-shrink-0"></div>
+              <div className="w-full lg:w-72 h-48 rounded-[32px] bg-[#fec97a] flex-shrink-0"></div>
             </div>
           </div>
         </div>
@@ -206,7 +212,7 @@ export function Team() {
       {/* Stats Section */}
       <section className="py-24 border-y-2 border-[#f1f1ec] bg-white">
         <div className="max-w-[1440px] mx-auto px-8">
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="font-['Poppins',sans-serif] font-extrabold text-[48px] text-[#5a529a] mb-2">
                 12k+
@@ -249,25 +255,25 @@ export function Team() {
       {/* CTA Section */}
       <section className="py-24 bg-[#f1f1ec]">
         <div className="max-w-[896px] mx-auto px-8">
-          <div className="bg-white rounded-[48px] p-16 text-center shadow-sm">
-            <h2 className="font-['Poppins',sans-serif] font-bold text-[36px] mb-4">
+          <div className="bg-white rounded-[32px] md:rounded-[48px] p-8 md:p-16 text-center shadow-sm">
+            <h2 className="font-['Poppins',sans-serif] font-bold text-[28px] md:text-[36px] mb-4">
               <span className="text-[#2d2f2c]">Ready to build something </span>
               <span className="text-[#5a529a] underline decoration-[#b5adfd]">wonderful?</span>
             </h2>
-            <p className="font-['Manrope',sans-serif] text-[18px] text-[#5a5c58] mb-6">
+            <p className="font-['Manrope',sans-serif] text-[16px] md:text-[18px] text-[#5a5c58] mb-6">
               Consult with Ximena and Celeste today to bring inclusive play to your community.
             </p>
             
-            <div className="flex gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <Link
                 to="/contact"
-                className="bg-[#5a529a] text-[#f5f0ff] px-10 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] hover:bg-[#4a4289] transition-colors shadow-lg"
+                className="bg-[#5a529a] text-[#f5f0ff] px-8 md:px-10 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] hover:bg-[#4a4289] transition-colors shadow-lg w-full sm:w-auto block"
               >
                 Get a Proposal
               </Link>
               <a
                 href="#"
-                className="bg-white text-[#5a529a] px-10 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] border-2 border-[#5a529a] hover:bg-[#f5f0ff] transition-colors"
+                className="bg-white text-[#5a529a] px-8 md:px-10 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] border-2 border-[#5a529a] hover:bg-[#f5f0ff] transition-colors w-full sm:w-auto block"
               >
                 Download Safety Guide
               </a>
