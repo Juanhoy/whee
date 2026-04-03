@@ -1,7 +1,7 @@
-import imgCeleste from "../../../img/hero.png";
-import imgMarcus from "../../../img/hero.png";
-import imgXimena from "../../../img/hero.png";
-import imgHero from "../../../img/hero.png";
+import imgCeleste from "../../assets/hero.png";
+import imgMarcus from "../../assets/hero.png";
+import imgXimena from "../../assets/hero.png";
+import imgHero from "../../assets/hero.png";
 import { Link } from "react-router";
 
 // Reusable Team Member Card Component
