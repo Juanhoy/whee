@@ -26,7 +26,7 @@ export function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="font-['Poppins',sans-serif] font-extrabold text-[48px] md:text-[60px] lg:text-[72px] leading-tight mb-6"
+                className="font-['Poppins',sans-serif] font-extrabold text-[40px] sm:text-[48px] md:text-[60px] lg:text-[72px] leading-tight mb-6"
               >
                 <span className="text-[#2d2f2c]">Architects of</span>
                 <br />

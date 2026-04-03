@@ -14,7 +14,7 @@ export function Contact() {
               </span>
             </div>
             
-            <h1 className="font-['Poppins',sans-serif] font-extrabold text-[72px] leading-[72px] tracking-[-1.8px] mb-6">
+            <h1 className="font-['Poppins',sans-serif] font-extrabold text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] leading-tight tracking-[-1.8px] mb-6">
               <span className="text-[#5a529a]">Let's build a</span>
               <br />
               <span className="text-[#2c6084]">world of wonder</span>
@@ -36,9 +36,9 @@ export function Contact() {
         </div>
 
         {/* Contact Info and Form Grid */}
-        <div className="grid grid-cols-12 gap-8 mb-24">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 mb-24">
           {/* Contact Details & Map */}
-          <div className="col-span-5 flex flex-col gap-8">
+          <div className="lg:col-span-5 flex flex-col gap-8">
             {/* Info Card */}
             <div className="bg-[#f1f1ec] rounded-[32px] p-10 relative overflow-hidden">
               <div className="absolute bg-[rgba(168,215,255,0.2)] blur-[32px] bottom-[-48px] right-[-48px] rounded-full w-[192px] h-[192px]" />
@@ -124,17 +124,16 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="col-span-7 bg-white rounded-[32px] p-12 shadow-lg">
-            <h2 className="font-['Poppins',sans-serif] font-extrabold text-[30px] text-[#2d2f2c] mb-2">
+          <div className="lg:col-span-7 bg-white rounded-[32px] p-8 md:p-12 shadow-lg">
+            <h2 className="font-['Poppins',sans-serif] font-extrabold text-[24px] md:text-[30px] text-[#2d2f2c] mb-2">
               Start Your Project
             </h2>
             <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[24px] mb-10">
-              Fill out the form below and an expert from our design team will reach out within 24<br />
-              hours.
+              Fill out the form below and an expert from our design team will reach out within 24 hours.
             </p>
 
             <form className="flex flex-col gap-6">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] block mb-2">
                     Parent Name

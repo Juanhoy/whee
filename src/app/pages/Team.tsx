@@ -67,7 +67,7 @@ export function Team() {
                 </span>
               </div>
               
-              <h1 className="font-['Poppins',sans-serif] font-extrabold text-[48px] md:text-[60px] lg:text-[72px] leading-tight mb-6">
+              <h1 className="font-['Poppins',sans-serif] font-extrabold text-[40px] sm:text-[48px] md:text-[60px] lg:text-[72px] leading-tight mb-6">
                 <span className="text-[#2d2f2c]">Architects of</span>
                 <br />
                 <span className="text-[#5a529a]">Inclusion.</span>

@@ -17,7 +17,7 @@ export function Solutions() {
               </span>
             </div>
             
-            <h1 className="font-['Poppins',sans-serif] font-extrabold text-[48px] md:text-[60px] lg:text-[72px] leading-tight mb-6">
+            <h1 className="font-['Poppins',sans-serif] font-extrabold text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] leading-tight mb-6">
               Comprehensive Play
               <br />
               <span className="text-[#5a529a]">Space Solutions</span>
