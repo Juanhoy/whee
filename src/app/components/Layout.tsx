@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router";
 import { ScrollToTop } from "./ScrollToTop";
-import logoImg from "../../../img/logo.png";
+import logoImg from "../../assets/logo.png";
 
 export function Layout() {
   const location = useLocation();
@@ -19,10 +19,7 @@ export function Layout() {
       <nav className="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-[#e2e3dd]">
         <div className="max-w-[1440px] mx-auto px-8 py-6 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logoImg} alt="Whee! Play Spaces Logo" className="h-12 w-auto" />
-            <div className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#5a529a] ml-2">
-              Whee! Play Spaces
-            </div>
+            <img src={logoImg} alt="Whee! Play Spaces Logo" className="h-16 w-auto" />
           </Link>
 
           <div className="flex items-center gap-8">

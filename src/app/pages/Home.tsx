@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import heroImg from "../../assets/hero.png";
 
 export function Home() {
   return (
@@ -43,8 +43,8 @@ export function Home() {
 
             <div className="relative">
               <div className="rounded-[32px] overflow-hidden shadow-2xl">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1763463034855-c48bc328fd4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBwbGF5Z3JvdW5kJTIwaW5jbHVzaXZlJTIwZGVzaWduJTIwY2hpbGRyZW58ZW58MXx8fHwxNzc0OTI1MjI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                <img
+                  src={heroImg}
                   alt="Modern inclusive playground design"
                   className="w-full h-[500px] object-cover"
                 />
