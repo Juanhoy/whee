@@ -5,38 +5,78 @@ export function Contact() {
   return (
     <div className="bg-[#f7f7f2] w-full pt-20">
       <div className="max-w-[1280px] mx-auto px-8 py-20">
-        {/* Header Section */}
-        <div className="flex gap-12 items-end mb-24">
-          <div className="flex-1">
-            <div className="inline-block bg-[#a8d7ff] px-4 py-1 rounded-full mb-6">
-              <span className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#104b6e] tracking-[0.7px]">
-                SAY HELLO
-              </span>
-            </div>
-            
-            <h1 className="font-['Poppins',sans-serif] font-extrabold text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] leading-tight tracking-[-1.8px] mb-6">
-              <span className="text-[#5a529a]">Let's build a</span>
-              <br />
-              <span className="text-[#2c6084]">world of wonder</span>
-              <br />
-              <span className="text-[#5a529a]">together.</span>
-            </h1>
-
-            <p className="font-['Manrope',sans-serif] text-[20px] text-[#5a5c58] leading-[32px] max-w-[672px]">
-              Whether you're starting from scratch or reimagining an existing space,
-              our team is here to guide you through every joyful milestone.
-            </p>
-          </div>
-
-          <div className="w-[96px] h-[96px] bg-[rgba(254,201,122,0.3)] rounded-full flex items-center justify-center">
-            <svg className="w-[27px] h-[27px]" fill="none" viewBox="0 0 27 27">
-              <path d={svgPaths.p7f33a00} fill="#7A540F" />
-            </svg>
-          </div>
-        </div>
-
         {/* Contact Info and Form Grid */}
-        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 mb-24">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 pb-12">
+          
+          {/* Contact Form */}
+          <div className="lg:col-span-7 bg-white rounded-[32px] p-8 md:p-12 shadow-lg">
+            <h2 className="font-['Poppins',sans-serif] font-extrabold text-[24px] md:text-[30px] text-[#2d2f2c] mb-2">
+              Start Your Project
+            </h2>
+            <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[24px] mb-10">
+              Fill out the form below and an expert from our design team will reach out within 24 hours.
+            </p>
+
+            <form className="flex flex-col gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] block mb-2">
+                    Parent Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="John Doe"
+                    className="w-full bg-[#e2e3dd] px-6 py-4 rounded-md font-['Manrope',sans-serif] text-[16px] text-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#5a529a]"
+                  />
+                </div>
+
+                <div>
+                  <label className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] block mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="john@example.com"
+                    className="w-full bg-[#e2e3dd] px-6 py-4 rounded-md font-['Manrope',sans-serif] text-[16px] text-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#5a529a]"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] block mb-2">
+                  Project Interest
+                </label>
+                <select className="w-full bg-[#e2e3dd] px-6 py-4 rounded-md font-['Manrope',sans-serif] text-[16px] text-[#2d2f2c] focus:outline-none focus:ring-2 focus:ring-[#5a529a] appearance-none">
+                  <option>Residential Backyard Play</option>
+                  <option>Community Playground</option>
+                  <option>School Environment</option>
+                  <option>Therapy Center</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] block mb-2">
+                  Tell us about your space & child
+                </label>
+                <textarea
+                  placeholder="Share your vision or any specific safety needs..."
+                  rows={5}
+                  className="w-full bg-[#e2e3dd] px-6 py-4 rounded-md font-['Manrope',sans-serif] text-[16px] text-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#5a529a] resize-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="bg-[#5a529a] text-white py-5 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] hover:bg-[#4a4289] transition-colors shadow-lg flex items-center justify-center gap-3"
+              >
+                Begin My Project Journey
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                  <path d={svgPaths.p1a406200} fill="white" />
+                </svg>
+              </button>
+            </form>
+          </div>
+
           {/* Contact Details & Map */}
           <div className="lg:col-span-5 flex flex-col gap-8">
             {/* Info Card */}
@@ -121,75 +161,6 @@ export function Contact() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:col-span-7 bg-white rounded-[32px] p-8 md:p-12 shadow-lg">
-            <h2 className="font-['Poppins',sans-serif] font-extrabold text-[24px] md:text-[30px] text-[#2d2f2c] mb-2">
-              Start Your Project
-            </h2>
-            <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[24px] mb-10">
-              Fill out the form below and an expert from our design team will reach out within 24 hours.
-            </p>
-
-            <form className="flex flex-col gap-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] block mb-2">
-                    Parent Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="John Doe"
-                    className="w-full bg-[#e2e3dd] px-6 py-4 rounded-md font-['Manrope',sans-serif] text-[16px] text-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#5a529a]"
-                  />
-                </div>
-
-                <div>
-                  <label className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] block mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="john@example.com"
-                    className="w-full bg-[#e2e3dd] px-6 py-4 rounded-md font-['Manrope',sans-serif] text-[16px] text-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#5a529a]"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] block mb-2">
-                  Project Interest
-                </label>
-                <select className="w-full bg-[#e2e3dd] px-6 py-4 rounded-md font-['Manrope',sans-serif] text-[16px] text-[#2d2f2c] focus:outline-none focus:ring-2 focus:ring-[#5a529a] appearance-none">
-                  <option>Residential Backyard Play</option>
-                  <option>Community Playground</option>
-                  <option>School Environment</option>
-                  <option>Therapy Center</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] block mb-2">
-                  Tell us about your space & child
-                </label>
-                <textarea
-                  placeholder="Share your vision or any specific safety needs..."
-                  rows={5}
-                  className="w-full bg-[#e2e3dd] px-6 py-4 rounded-md font-['Manrope',sans-serif] text-[16px] text-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#5a529a] resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="bg-[#5a529a] text-white py-5 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] hover:bg-[#4a4289] transition-colors shadow-lg flex items-center justify-center gap-3"
-              >
-                Begin My Project Journey
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
-                  <path d={svgPaths.p1a406200} fill="white" />
-                </svg>
-              </button>
-            </form>
           </div>
         </div>
       </div>
