@@ -79,8 +79,8 @@ export function Team() {
             </div>
 
             <div className="relative">
-              <div className="rounded-[48px] overflow-hidden">
-                <img src={imgHero} alt="Team workspace" className="w-full h-[576px] object-cover" />
+              <div className="rounded-[48px] overflow-hidden flex items-center justify-center">
+                <img src={imgHero} alt="Team workspace" className="w-full h-auto object-contain" />
               </div>
             </div>
           </div>

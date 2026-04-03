@@ -75,12 +75,12 @@ export function Home() {
               <motion.div 
                 whileHover={{ y: -10 }}
                 transition={{ duration: 0.4 }}
-                className="rounded-[32px] overflow-hidden"
+                className="rounded-[32px] overflow-hidden flex items-center justify-center"
               >
                 <img
                   src={heroImg}
                   alt="Modern inclusive playground design"
-                  className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                 />
               </motion.div>
             </motion.div>
