@@ -1,0 +1,1 @@
+export const imgOverlay = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='205' height='205' viewBox='0 0 205 205'%3E%3Ccircle cx='102.5' cy='102.5' r='102.5' fill='%23000'/%3E%3C/svg%3E";
