@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router";
 import heroImg from "../../assets/hero.png";
 
@@ -6,58 +7,83 @@ export function Home() {
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative bg-[#f5f0ff] overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-8 py-24">
-          <div className="grid grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-block bg-[#a8d7ff] px-6 py-2 rounded-full mb-6">
-                <span className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#104b6e] tracking-[0.7px]">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-8 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="inline-block bg-[#a8d7ff] px-6 py-2 rounded-full mb-6 relative overflow-hidden group hover:bg-[#92ccfd] transition-colors cursor-default">
+                <span className="font-['Poppins',sans-serif] font-bold text-[14px] text-[#104b6e] tracking-[0.7px]">
                   SAFE SPACES DESIGNED BY EXPERTS
                 </span>
+                <motion.div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity pointer-events-none" />
               </div>
               
-              <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[72px] leading-[72px] mb-6">
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="font-['Poppins',sans-serif] font-extrabold text-[48px] md:text-[72px] leading-tight md:leading-[72px] mb-6"
+              >
                 <span className="text-[#2d2f2c]">Architects of</span>
                 <br />
                 <span className="text-[#5a529a]">Inclusion.</span>
-              </h1>
+              </motion.h1>
 
-              <p className="font-['Manrope',sans-serif] text-[20px] text-[#5a5c58] leading-[32px] mb-8">
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="font-['Manrope',sans-serif] text-[18px] md:text-[20px] text-[#5a5c58] leading-[32px] mb-8"
+              >
                 We blend clinical psychology with sensory-focused architecture to build environments where kids with autism, especially those on the autism spectrum, can flourish without barriers.
-              </p>
+              </motion.p>
 
-              <div className="flex gap-4">
-                <Link
-                  to="/contact"
-                  className="bg-[#5a529a] text-white px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] hover:shadow-xl transition-shadow"
-                >
-                  Book a Tour
-                </Link>
-                <Link
-                  to="/solutions"
-                  className="bg-white text-[#5a529a] px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] border-2 border-[#5a529a] hover:bg-[#5a529a] hover:text-white transition-colors"
-                >
-                  Explore Solutions
-                </Link>
-              </div>
-            </div>
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    to="/contact"
+                    className="block text-center bg-[#5a529a] text-white px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] hover:shadow-xl hover:bg-[#4a4381] transition-all"
+                  >
+                    Book a Tour
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    to="/solutions"
+                    className="block text-center bg-white text-[#5a529a] px-8 py-4 rounded-full font-['Manrope',sans-serif] font-bold text-[16px] border-2 border-[#5a529a] hover:bg-[#5a529a] hover:text-white transition-all"
+                  >
+                    Explore Solutions
+                  </Link>
+                </motion.div>
+              </motion.div>
+            </motion.div>
 
-            <div className="relative">
-              <div className="rounded-[32px] overflow-hidden shadow-2xl">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative mt-12 md:mt-0"
+            >
+              <motion.div 
+                whileHover={{ y: -10 }}
+                transition={{ duration: 0.4 }}
+                className="rounded-[32px] overflow-hidden"
+              >
                 <img
                   src={heroImg}
                   alt="Modern inclusive playground design"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                 />
-              </div>
-              <div className="absolute -bottom-8 -left-8 bg-[#fec97a] rounded-[24px] p-6 shadow-xl">
-                <div className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[48px] text-[#2d2f2c]">
-                  12k+
-                </div>
-                <div className="font-['Manrope',sans-serif] font-medium text-[14px] text-[#5a5c58]">
-                  Happy Families
-                </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -66,7 +92,7 @@ export function Home() {
       <section className="py-24 bg-white">
         <div className="max-w-[1440px] mx-auto px-8">
           <div className="text-center mb-16">
-            <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[48px] text-[#2d2f2c] mb-4">
+            <h2 className="font-['Poppins',sans-serif] font-bold text-[48px] text-[#2d2f2c] mb-4">
               Why Families Trust Whee!
             </h2>
             <p className="font-['Manrope',sans-serif] text-[18px] text-[#5a5c58] max-w-[800px] mx-auto">
@@ -81,7 +107,7 @@ export function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
+              <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
                 Sensory-Informed Design
               </h3>
               <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[26px]">
@@ -95,7 +121,7 @@ export function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
+              <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
                 Safety-First Architecture
               </h3>
               <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[26px]">
@@ -109,7 +135,7 @@ export function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
+              <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
                 Expert Team Collaboration
               </h3>
               <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[26px]">
@@ -125,7 +151,7 @@ export function Home() {
         <div className="max-w-[1440px] mx-auto px-8">
           <div className="grid grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[60px] text-[#5a529a] mb-2">
+              <div className="font-['Poppins',sans-serif] font-extrabold text-[60px] text-[#5a529a] mb-2">
                 12k+
               </div>
               <div className="font-['Manrope',sans-serif] font-medium text-[16px] text-[#5a5c58]">
@@ -134,7 +160,7 @@ export function Home() {
             </div>
 
             <div className="text-center">
-              <div className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[60px] text-[#5a529a] mb-2">
+              <div className="font-['Poppins',sans-serif] font-extrabold text-[60px] text-[#5a529a] mb-2">
                 45
               </div>
               <div className="font-['Manrope',sans-serif] font-medium text-[16px] text-[#5a5c58]">
@@ -143,7 +169,7 @@ export function Home() {
             </div>
 
             <div className="text-center">
-              <div className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[60px] text-[#5a529a] mb-2">
+              <div className="font-['Poppins',sans-serif] font-extrabold text-[60px] text-[#5a529a] mb-2">
                 100%
               </div>
               <div className="font-['Manrope',sans-serif] font-medium text-[16px] text-[#5a5c58]">
@@ -152,7 +178,7 @@ export function Home() {
             </div>
 
             <div className="text-center">
-              <div className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[60px] text-[#5a529a] mb-2">
+              <div className="font-['Poppins',sans-serif] font-extrabold text-[60px] text-[#5a529a] mb-2">
                 18
               </div>
               <div className="font-['Manrope',sans-serif] font-medium text-[16px] text-[#5a5c58]">
@@ -166,7 +192,7 @@ export function Home() {
       {/* CTA Section */}
       <section className="py-24 bg-[#5a529a] text-white">
         <div className="max-w-[1440px] mx-auto px-8 text-center">
-          <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[48px] mb-6">
+          <h2 className="font-['Poppins',sans-serif] font-extrabold text-[48px] mb-6">
             Ready to build something <span className="text-[#fec97a]">wonderful</span>?
           </h2>
           <p className="font-['Manrope',sans-serif] text-[20px] mb-8 max-w-[600px] mx-auto opacity-90">

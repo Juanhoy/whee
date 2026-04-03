@@ -1,7 +1,7 @@
-import imgCeleste from "../../assets/hero.png";
-import imgMarcus from "../../assets/hero.png";
-import imgXimena from "../../assets/hero.png";
-import imgHero from "../../assets/hero.png";
+import imgCeleste from "../../assets/celeste.png";
+import imgMarcus from "../../assets/marcus.png";
+import imgXimena from "../../assets/ximena.png";
+import imgHero from "../../assets/team.png";
 import { Link } from "react-router";
 
 // Reusable Team Member Card Component
@@ -28,7 +28,7 @@ function TeamMemberCard({
             <img src={image} alt={name} className="w-full h-full object-cover" />
           </div>
           
-          <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[30px] text-[#f5f0ff] mb-2">
+          <h3 className="font-['Poppins',sans-serif] font-bold text-[30px] text-[#f5f0ff] mb-2">
             {name}
           </h3>
           <p className="font-['Manrope',sans-serif] font-semibold text-[12px] text-[#b5adfd] uppercase tracking-[0.3px] mb-8">
@@ -67,7 +67,7 @@ export function Team() {
                 </span>
               </div>
               
-              <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[72px] leading-[72px] mb-6">
+              <h1 className="font-['Poppins',sans-serif] font-extrabold text-[72px] leading-[72px] mb-6">
                 <span className="text-[#2d2f2c]">Architects of</span>
                 <br />
                 <span className="text-[#5a529a]">Inclusion.</span>
@@ -91,7 +91,7 @@ export function Team() {
       <section className="bg-[#f1f1ec] py-24">
         <div className="max-w-[1440px] mx-auto px-8">
           <div className="text-center mb-20">
-            <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[36px] text-[#2d2f2c] mb-6">
+            <h2 className="font-['Poppins',sans-serif] font-bold text-[36px] text-[#2d2f2c] mb-6">
               Driven by Purpose & Expertise
             </h2>
             <p className="font-['Manrope',sans-serif] text-[18px] text-[#5a5c58] max-w-[740px] mx-auto">
@@ -119,7 +119,7 @@ export function Team() {
                     <img src={imgCeleste} alt="Celeste Ramirez" className="w-full h-full object-cover" />
                   </div>
                   
-                  <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[30px] text-white mb-2">
+                  <h3 className="font-['Poppins',sans-serif] font-bold text-[30px] text-white mb-2">
                     Celeste Ramirez
                   </h3>
                   <p className="font-['Manrope',sans-serif] font-semibold text-[12px] text-white uppercase tracking-[0.3px] mb-8 opacity-90">
@@ -150,7 +150,7 @@ export function Team() {
                     <img src={imgMarcus} alt="Marcus Thorne" className="w-full h-full object-cover" />
                   </div>
                   
-                  <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[30px] text-white mb-2">
+                  <h3 className="font-['Poppins',sans-serif] font-bold text-[30px] text-white mb-2">
                     Marcus Thorne
                   </h3>
                   <p className="font-['Manrope',sans-serif] font-semibold text-[12px] text-white uppercase tracking-[0.3px] mb-8 opacity-90">
@@ -178,7 +178,7 @@ export function Team() {
           <div className="bg-white rounded-[48px] p-10">
             <div className="flex gap-10 items-center">
               <div className="flex-1">
-                <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
+                <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
                   Our Collaborative Pulse
                 </h3>
                 <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[26px] mb-6">
@@ -208,7 +208,7 @@ export function Team() {
         <div className="max-w-[1440px] mx-auto px-8">
           <div className="grid grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[48px] text-[#5a529a] mb-2">
+              <div className="font-['Poppins',sans-serif] font-extrabold text-[48px] text-[#5a529a] mb-2">
                 12k+
               </div>
               <div className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] uppercase tracking-[1.4px]">
@@ -217,7 +217,7 @@ export function Team() {
             </div>
 
             <div className="text-center">
-              <div className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[48px] text-[#5a529a] mb-2">
+              <div className="font-['Poppins',sans-serif] font-extrabold text-[48px] text-[#5a529a] mb-2">
                 45
               </div>
               <div className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] uppercase tracking-[1.4px]">
@@ -226,7 +226,7 @@ export function Team() {
             </div>
 
             <div className="text-center">
-              <div className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[48px] text-[#5a529a] mb-2">
+              <div className="font-['Poppins',sans-serif] font-extrabold text-[48px] text-[#5a529a] mb-2">
                 100%
               </div>
               <div className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] uppercase tracking-[1.4px]">
@@ -235,7 +235,7 @@ export function Team() {
             </div>
 
             <div className="text-center">
-              <div className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[48px] text-[#5a529a] mb-2">
+              <div className="font-['Poppins',sans-serif] font-extrabold text-[48px] text-[#5a529a] mb-2">
                 18
               </div>
               <div className="font-['Manrope',sans-serif] font-bold text-[14px] text-[#5a5c58] uppercase tracking-[1.4px]">
@@ -250,7 +250,7 @@ export function Team() {
       <section className="py-24 bg-[#f1f1ec]">
         <div className="max-w-[896px] mx-auto px-8">
           <div className="bg-white rounded-[48px] p-16 text-center shadow-sm">
-            <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[36px] mb-4">
+            <h2 className="font-['Poppins',sans-serif] font-bold text-[36px] mb-4">
               <span className="text-[#2d2f2c]">Ready to build something </span>
               <span className="text-[#5a529a] underline decoration-[#b5adfd]">wonderful?</span>
             </h2>

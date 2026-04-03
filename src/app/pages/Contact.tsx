@@ -14,7 +14,7 @@ export function Contact() {
               </span>
             </div>
             
-            <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[72px] leading-[72px] tracking-[-1.8px] mb-6">
+            <h1 className="font-['Poppins',sans-serif] font-extrabold text-[72px] leading-[72px] tracking-[-1.8px] mb-6">
               <span className="text-[#5a529a]">Let's build a</span>
               <br />
               <span className="text-[#2c6084]">world of wonder</span>
@@ -44,7 +44,7 @@ export function Contact() {
               <div className="absolute bg-[rgba(168,215,255,0.2)] blur-[32px] bottom-[-48px] right-[-48px] rounded-full w-[192px] h-[192px]" />
               
               <div className="relative">
-                <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#5a529a] mb-4">
+                <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#5a529a] mb-4">
                   Direct Connection
                 </h3>
 
@@ -80,7 +80,7 @@ export function Contact() {
                   </div>
                 </div>
 
-                <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#5a529a] mb-4">
+                <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#5a529a] mb-4">
                   Our Home Base
                 </h3>
 
@@ -125,7 +125,7 @@ export function Contact() {
 
           {/* Contact Form */}
           <div className="col-span-7 bg-white rounded-[32px] p-12 shadow-lg">
-            <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[30px] text-[#2d2f2c] mb-2">
+            <h2 className="font-['Poppins',sans-serif] font-extrabold text-[30px] text-[#2d2f2c] mb-2">
               Start Your Project
             </h2>
             <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[24px] mb-10">

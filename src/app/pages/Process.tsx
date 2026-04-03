@@ -12,7 +12,7 @@ export function Process() {
             </span>
           </div>
           
-          <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[72px] leading-[72px] mb-6">
+          <h1 className="font-['Poppins',sans-serif] font-extrabold text-[72px] leading-[72px] mb-6">
             <span className="text-[#2d2f2c]">Our Consultative</span>
             <br />
             <span className="text-[#5a529a]">Process</span>
@@ -33,7 +33,7 @@ export function Process() {
               <div className="font-['Manrope',sans-serif] font-bold text-[48px] text-[#a8d7ff] mb-8">
                 01
               </div>
-              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
+              <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
                 Empathy Meeting
               </h3>
               <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[26px]">
@@ -46,7 +46,7 @@ export function Process() {
               <div className="font-['Manrope',sans-serif] font-bold text-[48px] text-[#b5adfd] mb-8">
                 02
               </div>
-              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
+              <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
                 Concept
               </h3>
               <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[26px]">
@@ -59,7 +59,7 @@ export function Process() {
               <div className="font-['Manrope',sans-serif] font-bold text-[48px] text-[#fec97a] mb-8">
                 03
               </div>
-              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
+              <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
                 Architectural Drawings
               </h3>
               <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[26px]">
@@ -72,7 +72,7 @@ export function Process() {
               <div className="font-['Manrope',sans-serif] font-bold text-[48px] text-[#5a529a] mb-8">
                 04
               </div>
-              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
+              <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
                 Renders
               </h3>
               <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[26px]">
@@ -85,7 +85,7 @@ export function Process() {
               <div className="font-['Manrope',sans-serif] font-bold text-[48px] text-[#a8d7ff] mb-8">
                 05
               </div>
-              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
+              <h3 className="font-['Poppins',sans-serif] font-bold text-[24px] text-[#2d2f2c] mb-4">
                 We Build with You
               </h3>
               <p className="font-['Manrope',sans-serif] text-[16px] text-[#5a5c58] leading-[26px]">
@@ -101,7 +101,7 @@ export function Process() {
         <div className="max-w-[1280px] mx-auto px-8">
           <div className="grid grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[36px] text-[#2d2f2c] mb-6">
+              <h2 className="font-['Poppins',sans-serif] font-bold text-[36px] text-[#2d2f2c] mb-6">
                 Why Our Process Works
               </h2>
               <p className="font-['Manrope',sans-serif] text-[18px] text-[#5a5c58] leading-[28px] mb-6">
@@ -113,7 +113,7 @@ export function Process() {
               
               <div className="flex gap-4">
                 <div className="flex-1 bg-white rounded-[24px] p-6">
-                  <div className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[32px] text-[#5a529a] mb-2">
+                  <div className="font-['Poppins',sans-serif] font-bold text-[32px] text-[#5a529a] mb-2">
                     100%
                   </div>
                   <p className="font-['Manrope',sans-serif] text-[14px] text-[#5a5c58]">
@@ -122,7 +122,7 @@ export function Process() {
                 </div>
                 
                 <div className="flex-1 bg-white rounded-[24px] p-6">
-                  <div className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[32px] text-[#5a529a] mb-2">
+                  <div className="font-['Poppins',sans-serif] font-bold text-[32px] text-[#5a529a] mb-2">
                     15+
                   </div>
                   <p className="font-['Manrope',sans-serif] text-[14px] text-[#5a5c58]">
@@ -133,7 +133,7 @@ export function Process() {
             </div>
 
             <div className="bg-[#5a529a] rounded-[48px] p-12 text-white">
-              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[28px] text-[#f5f0ff] mb-6">
+              <h3 className="font-['Poppins',sans-serif] font-bold text-[28px] text-[#f5f0ff] mb-6">
                 Collaborative Approach
               </h3>
               <p className="font-['Manrope',sans-serif] text-[16px] text-[rgba(245,240,255,0.9)] leading-[26px] mb-6">
@@ -180,7 +180,7 @@ export function Process() {
       <section className="py-24 bg-white">
         <div className="max-w-[896px] mx-auto px-8">
           <div className="bg-[#f5f0ff] rounded-[48px] p-16 text-center">
-            <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[36px] mb-4">
+            <h2 className="font-['Poppins',sans-serif] font-bold text-[36px] mb-4">
               <span className="text-[#2d2f2c]">Ready to start </span>
               <span className="text-[#5a529a]">your journey?</span>
             </h2>

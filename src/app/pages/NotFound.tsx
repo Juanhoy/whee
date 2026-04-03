@@ -4,11 +4,11 @@ export function NotFound() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center bg-[#f5f0ff]">
       <div className="max-w-[600px] mx-auto px-8 text-center">
-        <div className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[120px] text-[#5a529a] mb-4">
+        <div className="font-['Poppins',sans-serif] font-extrabold text-[120px] text-[#5a529a] mb-4">
           404
         </div>
         
-        <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[36px] text-[#2d2f2c] mb-4">
+        <h1 className="font-['Poppins',sans-serif] font-bold text-[36px] text-[#2d2f2c] mb-4">
           Page Not Found
         </h1>
         
