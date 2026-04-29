@@ -24,7 +24,6 @@ export const sanityFetch = async <T>(query: string, params: any = {}): Promise<T
     return (query.includes("[0]") ? null : []) as T;
   }
   const result = await client.fetch<T>(query, params);
-  console.log(`🔍 Sanity Query [${query.substring(0, 40)}...] returned ${Array.isArray(result) ? result.length : "1"} items.`);
   return result;
 };
 
