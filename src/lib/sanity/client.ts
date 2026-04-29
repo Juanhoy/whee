@@ -19,7 +19,7 @@ const client = createClient({
  * This prevents the app from hanging on pages that fetch Sanity data.
  */
 export const sanityFetch = async <T>(query: string, params: any = {}): Promise<T> => {
-  if (sanitizedProjectId === "placeholder-id" || sanitizedProjectId === "pressio-spine-project") {
+  if (sanitizedProjectId === "placeholder-id") {
     console.warn("⚠️ Sanity fetching skipped: NEXT_PUBLIC_SANITY_PROJECT_ID is still a placeholder.");
     return (query.includes("[0]") ? null : []) as T;
   }
