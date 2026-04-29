@@ -26,6 +26,8 @@ export default function Header() {
   // Close mobile menu on route change
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
+  if (pathname?.startsWith("/studio")) return null;
+
   return (
     <header
       className={`site-header${scrolled ? " site-header--scrolled" : ""}`}

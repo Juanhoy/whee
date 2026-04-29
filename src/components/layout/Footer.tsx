@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const FOOTER_LINKS = {
   Products: [
@@ -25,6 +28,8 @@ const FOOTER_LINKS = {
 };
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/studio")) return null;
   return (
     <footer className="site-footer" role="contentinfo">
       <div className="container">
