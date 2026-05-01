@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { sanityFetch } from "@/lib/sanity/client";
 import { SOLUTIONS_QUERY } from "@/lib/sanity/queries";
 import type { SolutionsPage } from "@/types/sanity";
@@ -11,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const AUDIENCES = [
-  { id: "surgeons", key: "forSurgeons" as const, label: "For Surgeons",  emoji: "🏥" },
-  { id: "ascs",     key: "forASCs"     as const, label: "For ASCs",      emoji: "⚕️" },
-  { id: "partners", key: "forPartners" as const, label: "For Partners",  emoji: "🤝" },
+  { id: "surgeons", key: "forSurgeons" as const, label: "For Surgeons",  emoji: "🏥", img: "https://res.cloudinary.com/dvm7fjhxs/image/upload/v1777652069/Surgeons_o3nldt.png" },
+  { id: "ascs",     key: "forASCs"     as const, label: "For ASCs",      emoji: "⚕️", img: "https://res.cloudinary.com/dvm7fjhxs/image/upload/v1777652068/ASCs_nmgfof.png" },
+  { id: "partners", key: "forPartners" as const, label: "For Partners",  emoji: "🤝", img: "https://res.cloudinary.com/dvm7fjhxs/image/upload/v1777652069/Partners_l5xfjj.png" },
 ];
 
 export default async function SolutionsPage() {
@@ -35,7 +36,7 @@ export default async function SolutionsPage() {
         </div>
       </section>
 
-      {AUDIENCES.map(({ id, key, label, emoji }, i) => {
+      {AUDIENCES.map(({ id, key, label, emoji, img }, i) => {
         const section = data?.[key];
         const isEven = i % 2 === 0;
         return (
@@ -70,15 +71,18 @@ export default async function SolutionsPage() {
                 <div style={{ 
                   order: isEven ? 1 : 0, 
                   aspectRatio: "16/10", 
-                  background: "#EEF1F6", 
                   borderRadius: "24px", 
-                  display: "flex", 
-                  alignItems: "center", 
-                  justifyContent: "center",
                   overflow: "hidden",
-                  boxShadow: "0 10px 40px rgba(0,0,0,0.05)"
+                  boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+                  position: "relative"
                 }}>
-                  <span style={{ fontSize: "5rem" }}>{emoji}</span>
+                  <Image
+                    src={img}
+                    alt={label}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </div>
