@@ -131,23 +131,34 @@ export default async function HomePage() {
                 title: "Clinical Mechanism",
                 desc: "Harnessing nitinol's superelastic properties for continuous dynamic compression, optimized for long-term fusion biology.",
                 href: "/clinical-evidence",
-                label: "Clinical Evidence"
+                label: "Clinical Evidence",
+                img: "https://res.cloudinary.com/dvm7fjhxs/image/upload/v1777651397/Precision-Engineering-Clinical-Mechanism_m8nein.jpg"
               },
               {
                 title: "Workflow Simplicity",
                 desc: "Reduced tray burden with single-use sterile instrumentation, specifically engineered for the ASC economic model.",
                 href: "/solutions",
-                label: "Solution Overview"
+                label: "Solution Overview",
+                img: "https://res.cloudinary.com/dvm7fjhxs/image/upload/v1777651395/Precision-Engineering-WorkflowSimplicity_gatklc.jpg"
               },
               {
                 title: "Platform Potential",
                 desc: "Our cervical technology is the foundation for a broader nitinol-based spinal fixation platform currently in development.",
                 href: "/products",
-                label: "Roadmap"
+                label: "Roadmap",
+                img: "https://res.cloudinary.com/dvm7fjhxs/image/upload/v1777651408/Precision-Engineering-Platform-Potential_vxhga9.jpg"
               }
             ].map((card, i) => (
               <div className="why-card-new" key={i}>
-                <div className="why-card-img-new" style={{ backgroundColor: "#F1F5F9" }} />
+                <div className="why-card-img-new" style={{ overflow: "hidden", padding: 0 }}>
+                  <Image
+                    src={card.img}
+                    alt={card.title}
+                    width={600}
+                    height={340}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                </div>
                 <div className="why-card-body-new">
                   <h3>{card.title}</h3>
                   <p>{card.desc}</p>
