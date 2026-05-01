@@ -60,16 +60,39 @@ function DownloadTile({
   href?: string | null;
   disabled?: boolean;
 }) {
+  const isPdf = href?.toLowerCase().endsWith(".pdf");
+
   const inner = (
     <>
-      <div className="pd-dl-thumb">
-        {/* PDF icon */}
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-          <polyline points="14 2 14 8 20 8" />
-          <line x1="9" y1="13" x2="15" y2="13" />
-          <line x1="9" y1="17" x2="15" y2="17" />
-        </svg>
+      <div className="pd-dl-thumb" style={{ position: "relative", overflow: "hidden" }}>
+        {href && !disabled && isPdf ? (
+          <>
+            <iframe
+              src={`${href}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
+              title={`${label} Preview`}
+              style={{
+                width: "calc(100% + 64px)",
+                height: "calc(100% + 80px)",
+                border: "none",
+                pointerEvents: "none",
+                position: "absolute",
+                top: "-60px",
+                left: "-32px",
+              }}
+              scrolling="no"
+              tabIndex={-1}
+            />
+            {/* Invisible overlay to block interactions and clicks on the iframe */}
+            <div style={{ position: "absolute", inset: 0, zIndex: 10 }} />
+          </>
+        ) : (
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="9" y1="13" x2="15" y2="13" />
+            <line x1="9" y1="17" x2="15" y2="17" />
+          </svg>
+        )}
       </div>
       <div className="pd-dl-label">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

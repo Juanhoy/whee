@@ -157,6 +157,7 @@ export default async function HomePage() {
                     width={600}
                     height={340}
                     style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                    unoptimized
                   />
                 </div>
                 <div className="why-card-body-new">

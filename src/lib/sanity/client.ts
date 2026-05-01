@@ -26,7 +26,9 @@ export const sanityFetch = async <T>(query: string, params: any = {}): Promise<T
     console.warn("⚠️ Sanity fetching skipped: NEXT_PUBLIC_SANITY_PROJECT_ID is still a placeholder.");
     return (query.includes("[0]") ? null : []) as T;
   }
-  const result = await client.fetch<T>(query, params);
+  const result = await client.fetch<T>(query, params, {
+    next: { revalidate: 30 },
+  });
   return result;
 };
 
