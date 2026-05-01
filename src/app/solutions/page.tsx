@@ -82,6 +82,7 @@ export default async function SolutionsPage() {
                     fill
                     style={{ objectFit: "cover" }}
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    unoptimized
                   />
                 </div>
               </div>
