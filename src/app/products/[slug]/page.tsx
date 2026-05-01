@@ -7,8 +7,8 @@ import { PRODUCT_QUERY } from "@/lib/sanity/queries";
 import { urlFor } from "@/lib/sanity/image";
 import type { Product } from "@/types/sanity";
 
-// Re-fetch from Sanity and regenerate at most every 60 seconds
-export const revalidate = 60;
+// Re-fetch from Sanity and regenerate at most every 30 seconds
+export const revalidate = 30;
 // Allow new slugs (products created after build) to be rendered on-demand
 export const dynamicParams = true;
 
