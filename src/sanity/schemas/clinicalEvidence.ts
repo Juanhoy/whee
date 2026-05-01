@@ -22,7 +22,7 @@ export const clinicalEvidence = defineType({
       ]
     }),
     defineField({ name: "slug",        title: "Slug",        type: "slug",     options: { source: "title" }, validation: (R) => R.required() }),
-    defineField({ name: "category",    title: "Category",    type: "string",   options: { list: [{ title: "Clinical Summary", value: "clinical-summary" }, { title: "Publication", value: "publication" }, { title: "White Paper", value: "white-paper" }] }, validation: (R) => R.required() }),
+    defineField({ name: "category",    title: "Category",    type: "string",   options: { list: [{ title: "Patents", value: "patents" }, { title: "Clinical Summary", value: "clinical-summary" }, { title: "Publication", value: "publication" }, { title: "White Paper", value: "white-paper" }] }, validation: (R) => R.required() }),
     defineField({ name: "summary",     title: "Summary",     type: "text",     validation: (R) => R.required() }),
     defineField({ name: "body",        title: "Body",        type: "array",    of: [{ type: "block" }] }),
     defineField({ name: "publishedAt", title: "Published At",type: "date" }),
