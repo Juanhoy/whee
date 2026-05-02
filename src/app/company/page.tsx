@@ -119,9 +119,9 @@ function TeamSection({
           {title}
         </h2>
 
-        {members && members.length > 0 ? (
+        {members && members.filter(m => m.name).length > 0 ? (
           <div className="why-grid-new" style={{ marginTop: "0" }}>
-            {members.map((member, i) => (
+            {members.filter(m => m.name).map((member, i) => (
               <div key={i} className="why-card-new" style={dark ? { background: "rgba(255,255,255,0.05)", borderColor: "rgba(255,255,255,0.1)" } : {}}>
                 <div className="why-card-body-new" style={{ textAlign: "center", alignItems: "center" }}>
                   {member.photo ? (
@@ -136,10 +136,10 @@ function TeamSection({
                     </div>
                   ) : (
                     <div style={{ width: 100, height: 100, borderRadius: "50%", background: dark ? "rgba(255,255,255,0.1)" : "#F1F5F9", marginBottom: "20px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "2rem", color: dark ? "white" : "var(--gray-300)" }}>
-                      {(member.name || "?").charAt(0)}
+                      {member.name.charAt(0)}
                     </div>
                   )}
-                  <h3 style={{ color: dark ? "white" : undefined, fontSize: "17px", marginBottom: "4px" }}>{member.name || "Untitled Member"}</h3>
+                  <h3 style={{ color: dark ? "white" : undefined, fontSize: "17px", marginBottom: "4px" }}>{member.name}</h3>
                   <p style={{ color: dark ? "var(--secondary)" : "var(--primary)", fontWeight: 700, fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "16px" }}>
                     {member.role}
                   </p>
