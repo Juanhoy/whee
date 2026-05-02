@@ -41,7 +41,7 @@ export default async function ProductsPage() {
         <div className="section-inner-new">
           <div className="portfolio-bucket-new">
             <div className="bucket-header-new">
-              <span className="bucket-label-new available">Available Now — FDA Cleared &amp; Commercially Distributed</span>
+              <span className="bucket-label-new available" style={{ whiteSpace: "normal", lineHeight: 1.4 }}>Available Now — FDA Cleared &amp; Commercially Distributed</span>
               <div className="bucket-hr-new" aria-hidden="true" />
             </div>
 
@@ -64,7 +64,7 @@ export default async function ProductsPage() {
           <div className="section-inner-new">
             <div className="portfolio-bucket-new">
               <div className="bucket-header-new">
-                <span className="bucket-label-new pipeline">In Development — Pipeline</span>
+                <span className="bucket-label-new pipeline" style={{ whiteSpace: "normal", lineHeight: 1.4 }}>In Development — Pipeline</span>
                 <div className="bucket-hr-new" aria-hidden="true" />
               </div>
 
