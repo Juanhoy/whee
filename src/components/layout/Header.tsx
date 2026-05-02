@@ -26,6 +26,27 @@ export default function Header() {
   // Close mobile menu on route change
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    if (!menuOpen) return;
+    const handleClick = (e: MouseEvent | TouchEvent) => {
+      const nav = document.getElementById("main-nav");
+      const toggle = document.getElementById("navToggle");
+      if (
+        nav && !nav.contains(e.target as Node) &&
+        toggle && !toggle.contains(e.target as Node)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    document.addEventListener("touchstart", handleClick, { passive: true });
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+      document.removeEventListener("touchstart", handleClick);
+    };
+  }, [menuOpen]);
+
   if (pathname?.startsWith("/studio")) return null;
 
   return (
@@ -58,23 +79,21 @@ export default function Header() {
           aria-label="Toggle navigation"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            <line x1="3" y1="6" x2="19" y2="6" style={{ display: menuOpen ? "none" : "block" }} />
-            <line x1="3" y1="11" x2="19" y2="11" />
-            <line x1="3" y1="16" x2="19" y2="16" style={{ display: menuOpen ? "none" : "block" }} />
-          </svg>
+          {menuOpen ? (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          ) : (
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <line x1="3" y1="6" x2="19" y2="6" />
+              <line x1="3" y1="11" x2="19" y2="11" />
+              <line x1="3" y1="16" x2="19" y2="16" />
+            </svg>
+          )}
         </button>
       </div>
       
-      {/* Invisible overlay to close menu when clicking outside */}
-      {menuOpen && (
-        <div 
-          onClick={() => setMenuOpen(false)}
-          style={{ position: "fixed", inset: 0, zIndex: 98 }}
-          aria-hidden="true"
-        />
-      )}
-
       <style dangerouslySetInnerHTML={{__html: `
         @media (max-width: 900px) {
           #main-nav.nav-new.open {
