@@ -66,6 +66,18 @@ export default function Header() {
         </button>
       </div>
       
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 900px) {
+          #main-nav.nav-new.open {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+          }
+        }
+      `}} />
     </header>
   );
 }
